@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+app:startDestination="@id/searchFragment">
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="dev.propoc.flickrcodechallenge.view.searchpage.SearchFragment"
+        android:label="Fragment A">
+        <action
+            android:id="@+id/action_searchFragment_to_details_fragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="dev.propoc.flickrcodechallenge.view.detailspage.DetailFragment"
+        android:label="Fragment B">
+        <argument
+            android:name="item"
+            app:argType="dev.propoc.flickrcodechallenge.model.Item" />
+    </fragment>
+
+</navigation>
